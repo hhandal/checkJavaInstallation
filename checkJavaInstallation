@@ -1,0 +1,11 @@
+
+#!/usr/bin/env bash
+Java_PluginPath="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin"
+Java_BlundleVersion=$( /usr/bin/defaults read "${Java_PluginPath}/Contents/Info" CFBundleVersion 2>/dev/null )
+Java_BundleVersionString=$( /usr/bin/defaults read "${Java_PluginPath}/Contents/Info" CFBundleShortVersionString 2>/dev/null )
+
+	if [[ -e "${Java_PluginPath}" ]]; then
+		echo "${Java_BundleVersionString} (${Java_BlundleVersion})"
+	else
+		echo "Java is not installed"
+	fi
