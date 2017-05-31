@@ -1,4 +1,3 @@
-
 #!/usr/bin/env bash
 Java_PluginPath="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin"
 Java_BlundleVersion=$( /usr/bin/defaults read "${Java_PluginPath}/Contents/Info" CFBundleVersion 2>/dev/null )
